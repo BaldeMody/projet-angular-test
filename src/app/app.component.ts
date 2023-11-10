@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'agular-test';
+  actions : Array<any> = [
+  {title:"Home", route:"/home", icon : "house"},
+  {title:"Produits", route:"/produits", icon : "list-task"},
+  {title:"Nouveau produit", route:"/newProduit", icon : "plus-circle"}
+  ];
+  currentAction:any;
+  setCurrentAction(action:any){
+    this.currentAction=action;
+  }
 }

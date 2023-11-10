@@ -1,0 +1,53 @@
+{
+  "produits": [
+    {
+      "id": 1,
+      "nom": "Ordinateur_Portable",
+      "marque": "HP",
+      "prix": 145000,
+      "active": false
+    },
+    {
+      "id": 2,
+      "nom": "Ordinateur_Portable",
+      "marque": "HP",
+      "prix": 145000,
+      "active": true
+    },
+    {
+      "nom": "Télé",
+      "marque": "Samsung",
+      "prix": "30000",
+      "active": true,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "nom": "Ordinateur_Portable",
+      "marque": "HP",
+      "prix": 145000,
+      "active": false
+    },
+    {
+      "id": 5,
+      "nom": "Ordinateur_Portable",
+      "marque": "HP",
+      "prix": 145000,
+      "active": true
+    },
+    {
+      "nom": "Télé",
+      "marque": "Samsung",
+      "prix": "30000",
+      "active": true,
+      "id": 6
+    },
+    {
+      "nom": "Ordinateur",
+      "marque": "Lenovo",
+      "prix": "231000",
+      "active": true,
+      "id": 7
+    }
+  ]
+}

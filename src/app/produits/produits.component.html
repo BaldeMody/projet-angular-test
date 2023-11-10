@@ -1,0 +1,54 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-body">
+        <input type="text" [(ngModel)]="keyword">
+        <button (click)="searchProduct()" class="btn-outline-success">
+          <i class="bi-search"></i>
+        </button>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Marque</th>
+            <th>Prix</th>
+            <th>Diponible</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let produit of produits">
+            <td>{{produit.nom}}</td>
+            <td>{{produit.marque}}</td>
+            <td>{{produit.prix}}FCFA</td>
+            <td>
+              <button
+                (click)="disponible(produit)"
+                [class]="produit.active? 'btn btn-success' : 'btn btn-danger' ">
+                <i [class]="produit.active? 'bi bi-clipboard2-check' : 'bi bi-clipboard2-x'"></i>
+              </button>
+            </td>
+            <td>
+              <button (click)="productDelete(produit)" class="btn btn-outline-danger">
+                <i class="bi bi-trash"></i>
+
+              </button>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+      <ul class="nav nav-pills">
+        <li *ngFor="let page of [].constructor(this.totalPage); let i=index">
+          <button (click)="pageCourant(i+1)"
+                 [ngClass]="currentPage==(i+1)? 'btn btn-success m-1' : 'btn btn-outline-success m-1'">
+            {{(i+1)}}
+          </button>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
